@@ -18,7 +18,8 @@ Grupo 2: Dante Farfán, Massimo Larger, Diego Molina, Camilo Sanhueza, Tomás Te
 1. [Instrucciones](#instrucciones)
     1. [Clonar](#clonar)
     2. [Repositorio Local](#repositorio-local)
-    3. [Ejecución](#ejecución)
+    3. [Instalar librerías necesarias](#instalar-librerías-necesarias)
+    4. [Ejecución](#ejecución)
 
 ## **Instrucciones**
 Ésto es una guía de usuario para poder ejecutar el programa, el cuál se recomienda seguir paso por paso para minimizar los problemas que se puedan generar durante la ejecución. Cabe recalcar que se asumirá que se tiene `Python` ya instalado, además de que éste será en su última versión estable.
@@ -50,3 +51,5 @@ Ya instaladas las librerías, procedemos a ejecutar este programa, por lo que de
 > ...\Sis-GestionTurnos3> python code/InicioSesion.py
 
 ¡Felicidades, ejecutaste el programa!
+
+<pre>En `dataset/empleados.csv` se encuentran los usuarios y sus contraseñas para ingresar, ya sea como empleado o gerente.</pre>
