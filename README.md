@@ -41,6 +41,7 @@ Aceptamos cualquier mensaje para la instalación.
 
 Realizamos lo mismo para las siguientes librerías, verificando que se tiene instalado para el uso de ésta:
 > ...\Sis-GestionTurnos3> pip install PyQt6-Qt6
+
 > ...\Sis-GestionTurnos3> pip install PyQt6-sip
 
 ### **Ejecución**
