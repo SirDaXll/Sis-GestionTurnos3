@@ -17,7 +17,7 @@ Grupo 2: Dante Farfán, Massimo Larger, Diego Molina, Camilo Sanhueza, Tomás Te
 
 1. [Instrucciones](#instrucciones)
     1. [Clonar](#clonar)
-    2. [Repositorio Local](#repositorio-local)
+    2. [Repositorio local](#repositorio-local)
     3. [Instalar librerías necesarias](#instalar-librerías-necesarias)
     4. [Ejecución](#ejecución)
 
@@ -28,7 +28,7 @@ Grupo 2: Dante Farfán, Massimo Larger, Diego Molina, Camilo Sanhueza, Tomás Te
 
 Primero hay que descargar el repositorio desde la pestaña `<> Code` (de color verde) y seleccionando el `Download ZIP`. Al finalizar la descarga hay que descomprimir el contenido y entrar a la carpeta creada.
 
-### **Repositorio Local**
+### **Repositorio local**
 
 Ya entrando a la carpeta creada al haber descomprimido el `ZIP` tendremos que entrar a la línea de comandos, en específico desde la carpeta descomprimida, hacer click derecho dentro y clickear `Abrir en Terminal`, abriéndose así el `CMD` de Windows en la dirección indicada. Para asegurarse de que estés en la ubicación necesaria, debes fijarte de que la dirección sea:
 > ...\Sis-GestionTurnos3>
