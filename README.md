@@ -46,7 +46,7 @@ Realizamos lo mismo para las siguientes librerías, verificando que se tiene ins
 
 ### **Ejecución**
 
-Ya abierto el `CMD`, procedemos a ejecutar este programa, por lo que debemos ingresar en el `CMD` lo siguiente:
+Ya instaladas las librerías, procedemos a ejecutar este programa, por lo que debemos ingresar en el `CMD` lo siguiente:
 > ...\Sis-GestionTurnos3> python code/InicioSesion.py
 
 ¡Felicidades, ejecutaste el programa!
