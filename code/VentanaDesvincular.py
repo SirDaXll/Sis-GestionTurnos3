@@ -30,8 +30,8 @@ class Desvincular(QMainWindow):
         logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         #botones
-        volver=QPushButton("volver")
-        #volver.clicked.connect(self.cerrar)#creo que se puede achicar la funcion
+        volver=QPushButton("Volver")
+        volver.clicked.connect(lambda e: self.close())#creo que se puede achicar la funcion
        
 
         #asignar widgets
@@ -57,6 +57,7 @@ class Desvincular(QMainWindow):
                 for empleado in reader:
                     nombre = empleado[0]
                     self.lista.addItem(nombre)
+                archivo.close()
         except FileNotFoundError:
             QMessageBox.warning(self, "Error", "El archivo empleados.csv no se encontró.")
         except Exception as e:
@@ -69,12 +70,14 @@ class Desvincular(QMainWindow):
             try:
                 with open('dataset/empleados.csv', 'r') as archivo:
                     empleados = list(csv.reader(archivo))
+                    archivo.close()
             
                 with open('dataset/empleados.csv', 'w', newline='') as archivo:
                     writer = csv.writer(archivo)
                     for empleado in empleados:
                         if empleado[0] != empleado_seleccionado:
                             writer.writerow(empleado)
+                    archivo.close()
                 
                 self.lista.takeItem(self.lista.row(item))
             except FileNotFoundError:

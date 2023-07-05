@@ -22,6 +22,7 @@ with open('dataset/empleados.csv', newline='') as archivo:
             usuarios_contrasenas[usuario] = Gerente(nombre, rol, usuario, contrasena)
         else:
             usuarios_contrasenas[usuario] = Empleado(nombre, rol, usuario, contrasena)
+    archivo.close()
 
 class VentanaInicioSesion(QWidget):
     def __init__(self):

@@ -13,7 +13,7 @@ class VentanaGerente(QMainWindow):
         self.setWindowTitle("Sistema de Gestión")
         self.setWindowIcon(QIcon(r"asset/logo.png"))  
         self.ventana_registrar = VentanaRegistro()
-        self.ventana_desvincular = Desvincular()
+        self.ventana_desvincular = None
         self.ventana_crear_modificar = VentanaPrincipal()
         self.ventana_modificar_contrasena = ModificarContraseña()
         # Logo y nombre 
@@ -39,7 +39,7 @@ class VentanaGerente(QMainWindow):
 
         self.modificar_contrasena_btn.clicked.connect(lambda: self.ventana_modificar_contrasena.show())
         self.registrar_btn.clicked.connect(lambda: self.ventana_registrar.show())
-        self.despedir_btn.clicked.connect(lambda: self.ventana_desvincular.show())
+        self.despedir_btn.clicked.connect(self.mostrar_desvincular)
         self.crear_modificar_btn.clicked.connect(lambda: self.ventana_crear_modificar.show())
         # Diseño de la ventana
         layout = QVBoxLayout()
@@ -66,6 +66,10 @@ class VentanaGerente(QMainWindow):
     def modificar(self):
         self.modi=ModificarContraseña()
         self.modi.show()
+
+    def mostrar_desvincular(self):
+        self.ventana_desvincular = Desvincular()
+        self.ventana_desvincular.show()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

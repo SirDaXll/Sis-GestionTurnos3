@@ -110,12 +110,13 @@ class VentanaRegistro(QDialog):
             archivo_csv.write(usuario + ",")
             archivo_csv.write(contrasena + "\n")
             QMessageBox.information(self, "Empleados (Nombre Empresa)", "Empleado registrado exitosamente.")
+            Lista_empleados.append(str(nombre + " " + usuario))
             self.campo_nombre.clear()
             self.campo_usuario.clear()
             self.campo_contrasena.clear()
             self.campo_contrasena_confirmar.clear()
             self.close()
-
+            archivo_csv.close()
 
 class VentanaTurnos(QDialog):
     def __init__(self):
@@ -173,7 +174,7 @@ class VentanaTurnos(QDialog):
             writer.writerow(turno)
 
         # Actualizar la lista de turnos
-        lista_turnos.append(turno)
+        lista_turnos.append(str(turno))
 
 class VentanaModificar(QDialog):
     def __init__(self):
