@@ -68,10 +68,10 @@ class VentanaRegistro(QDialog):
 
         self.etiqueta_usuario = QLabel("Usuario")
         self.campo_usuario = QLineEdit()
-        self.etiqueta_contrasena = QLabel("Contrasena:")
+        self.etiqueta_contrasena = QLabel("Contraseña:")
         self.campo_contrasena = QLineEdit()
         self.campo_contrasena.setEchoMode(QLineEdit.EchoMode.Password)
-        self.etiqueta_contrasena_confirmar = QLabel("confirmar Contrasena:")
+        self.etiqueta_contrasena_confirmar = QLabel("Confirmar Contraseña:")
         self.campo_contrasena_confirmar=QLineEdit()
         self.campo_contrasena_confirmar.setEchoMode(QLineEdit.EchoMode.Password)
         self.boton_guardar = QPushButton("Guardar")
@@ -181,7 +181,6 @@ class VentanaModificar(QDialog):
         super().__init__()
         self.setWindowTitle("Modificar turnos")
         #Elementos
-        texto = QLabel("Modificar turno")
         etiqueta_turno = QLabel("Turno")
         self.turnos = QComboBox()
         self.boton_aceptar = QPushButton("Aceptar")
@@ -198,7 +197,6 @@ class VentanaModificar(QDialog):
         campos_widget.setLayout(campos)
 
         contenedor = QVBoxLayout()
-        contenedor.addWidget(texto)
         contenedor.addWidget(campos_widget)
         contenedor.addWidget(self.boton_aceptar)
 
@@ -220,7 +218,6 @@ class VentanaModificando(QDialog):
 
         self.etiqueta_fecha_hora = QLabel("Fecha")
         self.campo_fecha_hora = QDateTimeEdit()
-        self.etiqueta_empleado = QLabel("Empleado")
         self.campo_empleado = QComboBox()
         
         #Config

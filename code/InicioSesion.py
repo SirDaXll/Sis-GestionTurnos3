@@ -63,13 +63,13 @@ class VentanaInicioSesion(QWidget):
             empleado = usuarios_contrasenas[usuario]
             if contrasena == empleado.getContrasena():
                 if empleado.getRol() == "Gerente":
-                    print("Inicio de sesión completado como Gerente")
                     self.ventana_gerente.show()
                     self.hide()
+                    QMessageBox.information(self, "Informacion", "Se ha iniciado sesion", QMessageBox.StandardButton.Close,QMessageBox.StandardButton.Close)
                 else:
-                    print("Inicio de sesión completado como Empleado")
                     self.ventana_empleado.show()
                     self.hide()
+                    QMessageBox.information(self, "Informacion", "Se ha iniciado sesion", QMessageBox.StandardButton.Close,QMessageBox.StandardButton.Close)
             else:
                 QMessageBox.warning(self, "Error", "Contraseña incorrecta")
         else:
