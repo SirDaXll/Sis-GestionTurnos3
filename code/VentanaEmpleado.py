@@ -2,6 +2,7 @@ import sys
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import QMainWindow, QApplication, QWidget, QLabel, QPushButton, QGridLayout, QVBoxLayout, QDialog, QHBoxLayout, QLineEdit, QTableWidget
 
+"""
 class HorasTrabajadas(QDialog):
     def __init__(self):
         super().__init__()
@@ -23,7 +24,7 @@ class HorasTrabajadas(QDialog):
         self.texto3.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.texto2_horas.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.texto3_horas.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.boton_volver = QPushButton("Volver al menu")
+        self.boton_volver = QPushButton("Volver al menú")
 
         #Conectar botones
         self.boton_volver.clicked.connect(self.hide)
@@ -44,6 +45,7 @@ class HorasTrabajadas(QDialog):
         contenedor_principal.addWidget(textos_widget)
         contenedor_principal.addWidget(self.boton_volver)
         self.setLayout(contenedor_principal)
+"""
 
 class VerTurnos(QDialog):
     def __init__(self):
@@ -56,13 +58,13 @@ class VerTurnos(QDialog):
         self.tabla = QTableWidget()
         logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.boton_volver = QPushButton("Volver al menu")
+        self.boton_volver = QPushButton("Volver al menú")
 
         #Config
 
         for i in range(7):
             self.tabla.insertColumn(i)
-        self.tabla.setHorizontalHeaderLabels(["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"])
+        self.tabla.setHorizontalHeaderLabels(["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"])
         #Conectar botones
         self.boton_volver.clicked.connect(self.hide)
         
@@ -74,6 +76,7 @@ class VerTurnos(QDialog):
 
         self.setLayout(contenedor)
 
+"""
 class IngresoSalida(QDialog):
     def __init__(self):
         super().__init__()
@@ -105,8 +108,9 @@ class IngresoSalida(QDialog):
         contenedor.addWidget(self.boton_volver)
 
         self.setLayout(contenedor)
-        
-
+"""
+     
+"""
 class CambiarContrasena(QDialog):
     def __init__(self):
         super().__init__()
@@ -141,17 +145,18 @@ class CambiarContrasena(QDialog):
         contenedor.addWidget(self.boton_confirmar)
 
         self.setLayout(contenedor)
-
+"""
+        
 class VentanaEmpleado(QWidget):
     def __init__(self):
         super().__init__()
-        self.setFixedSize(530,610)
+        self.setFixedSize(300,200)
         self.setWindowTitle("Ventana Empleado")
         #ventanas
-        self.horas_trabajadas = HorasTrabajadas()
+        #self.horas_trabajadas = HorasTrabajadas()
         self.ver_turnos = VerTurnos()
-        self.ingreso_salida = IngresoSalida()
-        self.cambiar_con = CambiarContrasena()
+        #self.ingreso_salida = IngresoSalida()
+        #self.cambiar_con = CambiarContrasena()
 
         #Elementos
         logo = QLabel("Empresa")
@@ -159,25 +164,25 @@ class VentanaEmpleado(QWidget):
         #centrar textos
         logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.bienvenida.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.boton_cambiar = QPushButton("Cambiar contraseña")
+        #self.boton_cambiar = QPushButton("Cambiar contraseña")
         self.boton_ver_turnos = QPushButton("Ver turnos")
-        self.boton_horas_trabajadas = QPushButton("Horas trabajadas")
-        self.boton_ingsal = QPushButton("Ingreso/Salida")
+        #self.boton_horas_trabajadas = QPushButton("Horas trabajadas")
+        #self.boton_ingsal = QPushButton("Ingreso/Salida")
 
         self.lista_pendientes = QLabel()
 
         #conectar botones
-        self.boton_horas_trabajadas.clicked.connect(lambda: self.desplegar(0))
+        #self.boton_horas_trabajadas.clicked.connect(lambda: self.desplegar(0))
         self.boton_ver_turnos.clicked.connect(lambda: self.desplegar(1))
-        self.boton_ingsal.clicked.connect(lambda: self.desplegar(2))
-        self.boton_cambiar.clicked.connect(lambda: self.desplegar(3))
+        #self.boton_ingsal.clicked.connect(lambda: self.desplegar(2))
+        #self.boton_cambiar.clicked.connect(lambda: self.desplegar(3))
 
         #Contenedores
         botones = QGridLayout()
-        botones.addWidget(self.boton_cambiar,0,1)
+        #botones.addWidget(self.boton_cambiar,0,1)
         botones.addWidget(self.boton_ver_turnos,1,0)
-        botones.addWidget(self.boton_horas_trabajadas,1,1)
-        botones.addWidget(self.boton_ingsal,1,2)
+        #botones.addWidget(self.boton_horas_trabajadas,1,1)
+        #botones.addWidget(self.boton_ingsal,1,2)
         
         botones_widget = QWidget()
         
@@ -193,11 +198,11 @@ class VentanaEmpleado(QWidget):
     
     def desplegar(self,id:int):
         #id 0 para horas trabajadas
-        if id == 0:
-            if self.horas_trabajadas.isHidden():
-                self.horas_trabajadas.show()
-            else:
-                self.horas_trabajadas.hide()
+        #if id == 0:
+            #if self.horas_trabajadas.isHidden():
+                #self.horas_trabajadas.show()
+            #else:
+                #self.horas_trabajadas.hide()
         #id 1 para ver turnos
         if id == 1:
             if self.ver_turnos.isHidden():
@@ -205,17 +210,17 @@ class VentanaEmpleado(QWidget):
             else:
                 self.ver_turnos.hide()
         #id 2 para ingreso/salida
-        if id == 2:
-            if self.ingreso_salida.isHidden():
-                self.ingreso_salida.show()
-            else:
-                self.ingreso_salida.hide()
+        #if id == 2:
+            #if self.ingreso_salida.isHidden():
+                #self.ingreso_salida.show()
+            #else:
+                #self.ingreso_salida.hide()
         #id 3 para cambiar contraseña
-        if id == 3:
-            if self.cambiar_con.isHidden():
-                self.cambiar_con.show()
-            else:
-                self.cambiar_con.hide()
+        #if id == 3:
+            #if self.cambiar_con.isHidden():
+                #self.cambiar_con.show()
+            #else:
+                #self.cambiar_con.hide()
 
         
 if __name__ == "__main__":

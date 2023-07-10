@@ -27,7 +27,7 @@ class VentanaGerente(QMainWindow):
         self.empresa_lbl.setStyleSheet("font-size: 20px; font-weight: bold;")
 
         # bienvenida
-        self.bienvenida_lbl = QLabel("Bienvenido/a, [Nombre]")
+        self.bienvenida_lbl = QLabel("Bienvenido/a")
         self.bienvenida_lbl.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.bienvenida_lbl.setFont(QFont("Arial", 16))
 
