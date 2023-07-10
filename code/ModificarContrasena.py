@@ -24,7 +24,7 @@ class ModificarContraseña(QMainWindow):
 
         #botones
         mc=QPushButton("Modificar Contraseña")
-        volver=QPushButton("volver")
+        volver=QPushButton("Volver")
         volver.clicked.connect(self.cerrar)#creo que se puede achicar la funcion
         mc.clicked.connect(self.modificar_contrasena)
         mc.clicked.connect(self.get_items)
@@ -55,7 +55,7 @@ class ModificarContraseña(QMainWindow):
     def get_items(self):
         items=self.lista.selectedItems()
         for item in items:
-            print(item.text())
+            return item.text()
 class Modificar(QDialog):
     def __init__(self):
         super().__init__()
@@ -68,16 +68,16 @@ class Modificar(QDialog):
         datos=QGridLayout()
         
         #informacion de pantalla
-        self.titulo=QLabel("Cambiar contraseña de usuario")#aqui va el nombre de la persona tambien 
-        self.contrasena=QLabel("Contraseña")
-        self.confirmar_contrasena=QLabel("confirmar contraseña")
+        #self.titulo=QLabel("Cambiar contraseña de usuario")#aqui va el nombre de la persona tambien 
+        self.contrasena=QLabel("Contraseña:")
+        self.confirmar_contrasena=QLabel("Confirmar contraseña:")
         #datoas a ingresar
         self.modificar_contrasena=QLineEdit("")
         self.modificar_contrasena.setEchoMode(QLineEdit.EchoMode.Password)#primera contraseña
         self.modificar_confirmar=QLineEdit("")
         self.modificar_confirmar.setEchoMode(QLineEdit.EchoMode.Password)#segunda contraseña
         #boton
-        cambiar=QPushButton("cambiar")
+        cambiar=QPushButton("Cambiar")
         cambiar.clicked.connect(self.igualdad)
         #asignar las al grid
         datos.addWidget(self.contrasena,0,0)
@@ -85,7 +85,7 @@ class Modificar(QDialog):
         datos.addWidget(self.modificar_contrasena,0,1)
         datos.addWidget(self.modificar_confirmar,1,1)
         
-        ventanita.addWidget(self.titulo)
+        #ventanita.addWidget(self.titulo)
         ventanita.addLayout(datos)
         ventanita.addWidget(cambiar)
 
@@ -100,7 +100,7 @@ class Modificar(QDialog):
                 QMessageBox.information(self, "Modificar contraseña (empleado)", "Contraseña cambiada.")
                 self.close()
             else:
-               QMessageBox.information(self, "Modificar contraseña (empleado)", "contrasña vacia")
+               QMessageBox.information(self, "Modificar contraseña (empleado)", "Contraseña vacía.")
 
         else:
             QMessageBox.information(self, "Modificar contraseña (empleado)", "Contraseñas diferentes.")
