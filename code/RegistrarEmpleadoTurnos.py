@@ -59,7 +59,7 @@ class VentanaRegistro(QDialog):
         self.combo_box.addItem("Gerente")
         self.combo_box.addItem("Jefe de turno")
         self.combo_box.addItem("Recepcionista")
-        self.combo_box.addItem("Botonoes")        
+        self.combo_box.addItem("Botones")        
         self.combo_box.addItem("Guardia de seguridad")
         self.combo_box.addItem("Mucama")
         self.combo_box.addItem("Cocinero")        
