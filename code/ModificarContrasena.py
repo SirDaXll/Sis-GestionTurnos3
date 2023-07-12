@@ -12,7 +12,7 @@ class ModificarContraseña(QMainWindow):
         ventanaGrande=QVBoxLayout()# integra logo  y subventana
         subVentana=QHBoxLayout()#integra lista a la derecha y ventana derecha
         ventanaderecha=QVBoxLayout()#incluye dos botones derechos
-        listita=["hola","chao","ehh","si"]
+        listita=["Dante","Camilo","Diego","Massimo","Tomas"]
         self.lista=QListWidget()#lista
         self.lista.addItems(listita)
         
